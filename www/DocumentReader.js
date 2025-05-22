@@ -4313,7 +4313,10 @@ const Enum = {
    eMrzDetectionModes,
 }
 
-const DocumentReader = {}
+const DocumentReader = {
+    getDocumentReaderIsReady,
+    getDocReaderVersion
+}
 
 DocumentReader.getDocumentReaderIsReady = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getDocumentReaderIsReady"])
 DocumentReader.getDocumentReaderStatus = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getDocumentReaderStatus"])

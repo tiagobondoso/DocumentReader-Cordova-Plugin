@@ -4313,79 +4313,152 @@ const Enum = {
    eMrzDetectionModes,
 }
 
-const DocumentReader = {}
 
-DocumentReader.getDocumentReaderIsReady = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getDocumentReaderIsReady"])
-DocumentReader.getDocumentReaderStatus = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getDocumentReaderStatus"])
-DocumentReader.getRfidSessionStatus = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getRfidSessionStatus"])
-DocumentReader.setRfidSessionStatus = (status, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setRfidSessionStatus", status])
-DocumentReader.getTag = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getTag"])
-DocumentReader.setTag = (tag, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setTag", tag])
-DocumentReader.getTenant = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getTenant"])
-DocumentReader.setTenant = (tenant, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setTenant", tenant])
-DocumentReader.getEnv = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getEnv"])
-DocumentReader.setEnv = (env, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setEnv", env])
-DocumentReader.getFunctionality = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getFunctionality"])
-DocumentReader.setFunctionality = (functionality, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setFunctionality", functionality])
-DocumentReader.getProcessParams = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getProcessParams"])
-DocumentReader.setProcessParams = (processParams, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setProcessParams", processParams])
-DocumentReader.getCustomization = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getCustomization"])
-DocumentReader.setCustomization = (customization, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setCustomization", customization])
-DocumentReader.getRfidScenario = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getRfidScenario"])
-DocumentReader.setRfidScenario = (rfidScenario, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setRfidScenario", rfidScenario])
-DocumentReader.resetConfiguration = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["resetConfiguration"])
-DocumentReader.initializeReader = (config, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["initializeReader", config])
-DocumentReader.initializeReaderWithBleDeviceConfig = (config, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["initializeReaderWithBleDeviceConfig", config])
-DocumentReader.deinitializeReader = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["deinitializeReader"])
-DocumentReader.prepareDatabase = (databaseType, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["prepareDatabase", databaseType])
-DocumentReader.removeDatabase = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["removeDatabase"])
-DocumentReader.runAutoUpdate = (databaseId, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["runAutoUpdate", databaseId])
-DocumentReader.cancelDBUpdate = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["cancelDBUpdate"])
-DocumentReader.checkDatabaseUpdate = (databaseId, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["checkDatabaseUpdate", databaseId])
-DocumentReader.scan = (config, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["scan", config])
-DocumentReader.recognize = (config, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["recognize", config])
-DocumentReader.startNewPage = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["startNewPage"])
-DocumentReader.stopScanner = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["stopScanner"])
-DocumentReader.startRFIDReader = (requestPACertificates, requestTACertificates, requestTASignature, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["startRFIDReader", requestPACertificates, requestTACertificates, requestTASignature])
-DocumentReader.readRFID = (requestPACertificates, requestTACertificates, requestTASignature, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["readRFID", requestPACertificates, requestTACertificates, requestTASignature])
-DocumentReader.stopRFIDReader = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["stopRFIDReader"])
-DocumentReader.providePACertificates = (certificates, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["providePACertificates", certificates])
-DocumentReader.provideTACertificates = (certificates, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["provideTACertificates", certificates])
-DocumentReader.provideTASignature = (signature, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["provideTASignature", signature])
-DocumentReader.setTCCParams = (params, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setTCCParams", params])
-DocumentReader.addPKDCertificates = (certificates, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["addPKDCertificates", certificates])
-DocumentReader.clearPKDCertificates = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["clearPKDCertificates"])
-DocumentReader.startNewSession = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["startNewSession"])
-DocumentReader.connectBluetoothDevice = (btDeviceName, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["connectBluetoothDevice", btDeviceName])
-DocumentReader.setLocalizationDictionary = (dictionary, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setLocalizationDictionary", dictionary])
-DocumentReader.getLicense = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getLicense"])
-DocumentReader.getAvailableScenarios = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getAvailableScenarios"])
-DocumentReader.getIsRFIDAvailableForUse = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getIsRFIDAvailableForUse"])
-DocumentReader.isAuthenticatorRFIDAvailableForUse = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["isAuthenticatorRFIDAvailableForUse"])
-DocumentReader.isAuthenticatorAvailableForUse = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["isAuthenticatorAvailableForUse"])
-DocumentReader.getDocReaderVersion = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getDocReaderVersion"])
-DocumentReader.getDocReaderDocumentsDatabase = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getDocReaderDocumentsDatabase"])
-DocumentReader.finalizePackage = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["finalizePackage"])
-DocumentReader.endBackendTransaction = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["endBackendTransaction"])
-DocumentReader.getTranslation = (className, value, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getTranslation", className, value])
 
-DocumentReader.textFieldValueByType = (results, fieldType, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["textFieldValueByType", results.rawResult, fieldType])
-DocumentReader.textFieldValueByTypeLcid = (results, fieldType, lcid, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["textFieldValueByTypeLcid", results.rawResult, fieldType, lcid])
-DocumentReader.textFieldValueByTypeSource = (results, fieldType, source, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["textFieldValueByTypeSource", results.rawResult, fieldType, source])
-DocumentReader.textFieldValueByTypeLcidSource = (results, fieldType, lcid, source, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["textFieldValueByTypeLcidSource", results.rawResult, fieldType, lcid, source])
-DocumentReader.textFieldValueByTypeSourceOriginal = (results, fieldType, source, original, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["textFieldValueByTypeSourceOriginal", results.rawResult, fieldType, source, original])
-DocumentReader.textFieldValueByTypeLcidSourceOriginal = (results, fieldType, lcid, source, original, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["textFieldValueByTypeLcidSourceOriginal", results.rawResult, fieldType, lcid, source, original])
-DocumentReader.textFieldByType = (results, fieldType, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["textFieldByType", results.rawResult, fieldType])
-DocumentReader.textFieldByTypeLcid = (results, fieldType, lcid, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["textFieldByTypeLcid", results.rawResult, fieldType, lcid])
-DocumentReader.graphicFieldByTypeSource = (results, fieldType, source, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["graphicFieldByTypeSource", results.rawResult, fieldType, source])
-DocumentReader.graphicFieldByTypeSourcePageIndex = (results, fieldType, source, pageIndex, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["graphicFieldByTypeSourcePageIndex", results.rawResult, fieldType, source, pageIndex])
-DocumentReader.graphicFieldByTypeSourcePageIndexLight = (results, fieldType, source, pageIndex, light, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["graphicFieldByTypeSourcePageIndex", results.rawResult, fieldType, source, pageIndex, light])
-DocumentReader.graphicFieldImageByType = (results, fieldType, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["graphicFieldImageByType", results.rawResult, fieldType])
-DocumentReader.graphicFieldImageByTypeSource = (results, fieldType, source, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["graphicFieldImageByTypeSource", results.rawResult, fieldType, source])
-DocumentReader.graphicFieldImageByTypeSourcePageIndex = (results, fieldType, source, pageIndex, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["graphicFieldImageByTypeSourcePageIndex", results.rawResult, fieldType, source, pageIndex])
-DocumentReader.graphicFieldImageByTypeSourcePageIndexLight = (results, fieldType, source, pageIndex, light, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["graphicFieldImageByTypeSourcePageIndexLight", results.rawResult, fieldType, source, pageIndex, light])
-DocumentReader.containers = (results, resultType, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["containers", results.rawResult, resultType])
-DocumentReader.encryptedContainers = (results, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["encryptedContainers", results.rawResult])
+getDocumentReaderIsReady = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getDocumentReaderIsReady"])
+getDocumentReaderStatus = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getDocumentReaderStatus"])
+getRfidSessionStatus = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getRfidSessionStatus"])
+setRfidSessionStatus = (status, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setRfidSessionStatus", status])
+getTag = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getTag"])
+setTag = (tag, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setTag", tag])
+getTenant = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getTenant"])
+setTenant = (tenant, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setTenant", tenant])
+getEnv = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getEnv"])
+setEnv = (env, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setEnv", env])
+getFunctionality = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getFunctionality"])
+setFunctionality = (functionality, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setFunctionality", functionality])
+getProcessParams = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getProcessParams"])
+setProcessParams = (processParams, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setProcessParams", processParams])
+getCustomization = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getCustomization"])
+setCustomization = (customization, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setCustomization", customization])
+getRfidScenario = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getRfidScenario"])
+setRfidScenario = (rfidScenario, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setRfidScenario", rfidScenario])
+resetConfiguration = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["resetConfiguration"])
+initializeReader = (config, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["initializeReader", config])
+initializeReaderWithBleDeviceConfig = (config, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["initializeReaderWithBleDeviceConfig", config])
+deinitializeReader = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["deinitializeReader"])
+prepareDatabase = (databaseType, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["prepareDatabase", databaseType])
+removeDatabase = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["removeDatabase"])
+runAutoUpdate = (databaseId, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["runAutoUpdate", databaseId])
+cancelDBUpdate = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["cancelDBUpdate"])
+checkDatabaseUpdate = (databaseId, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["checkDatabaseUpdate", databaseId])
+scan = (config, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["scan", config])
+recognize = (config, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["recognize", config])
+startNewPage = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["startNewPage"])
+stopScanner = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["stopScanner"])
+startRFIDReader = (requestPACertificates, requestTACertificates, requestTASignature, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["startRFIDReader", requestPACertificates, requestTACertificates, requestTASignature])
+readRFID = (requestPACertificates, requestTACertificates, requestTASignature, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["readRFID", requestPACertificates, requestTACertificates, requestTASignature])
+stopRFIDReader = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["stopRFIDReader"])
+providePACertificates = (certificates, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["providePACertificates", certificates])
+provideTACertificates = (certificates, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["provideTACertificates", certificates])
+provideTASignature = (signature, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["provideTASignature", signature])
+setTCCParams = (params, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setTCCParams", params])
+addPKDCertificates = (certificates, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["addPKDCertificates", certificates])
+clearPKDCertificates = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["clearPKDCertificates"])
+startNewSession = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["startNewSession"])
+connectBluetoothDevice = (btDeviceName, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["connectBluetoothDevice", btDeviceName])
+setLocalizationDictionary = (dictionary, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setLocalizationDictionary", dictionary])
+getLicense = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getLicense"])
+getAvailableScenarios = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getAvailableScenarios"])
+getIsRFIDAvailableForUse = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getIsRFIDAvailableForUse"])
+isAuthenticatorRFIDAvailableForUse = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["isAuthenticatorRFIDAvailableForUse"])
+isAuthenticatorAvailableForUse = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["isAuthenticatorAvailableForUse"])
+getDocReaderVersion = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getDocReaderVersion"])
+getDocReaderDocumentsDatabase = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getDocReaderDocumentsDatabase"])
+finalizePackage = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["finalizePackage"])
+endBackendTransaction = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["endBackendTransaction"])
+getTranslation = (className, value, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getTranslation", className, value])
+
+textFieldValueByType = (results, fieldType, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["textFieldValueByType", results.rawResult, fieldType])
+textFieldValueByTypeLcid = (results, fieldType, lcid, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["textFieldValueByTypeLcid", results.rawResult, fieldType, lcid])
+textFieldValueByTypeSource = (results, fieldType, source, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["textFieldValueByTypeSource", results.rawResult, fieldType, source])
+textFieldValueByTypeLcidSource = (results, fieldType, lcid, source, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["textFieldValueByTypeLcidSource", results.rawResult, fieldType, lcid, source])
+textFieldValueByTypeSourceOriginal = (results, fieldType, source, original, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["textFieldValueByTypeSourceOriginal", results.rawResult, fieldType, source, original])
+textFieldValueByTypeLcidSourceOriginal = (results, fieldType, lcid, source, original, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["textFieldValueByTypeLcidSourceOriginal", results.rawResult, fieldType, lcid, source, original])
+textFieldByType = (results, fieldType, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["textFieldByType", results.rawResult, fieldType])
+textFieldByTypeLcid = (results, fieldType, lcid, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["textFieldByTypeLcid", results.rawResult, fieldType, lcid])
+graphicFieldByTypeSource = (results, fieldType, source, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["graphicFieldByTypeSource", results.rawResult, fieldType, source])
+graphicFieldByTypeSourcePageIndex = (results, fieldType, source, pageIndex, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["graphicFieldByTypeSourcePageIndex", results.rawResult, fieldType, source, pageIndex])
+graphicFieldByTypeSourcePageIndexLight = (results, fieldType, source, pageIndex, light, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["graphicFieldByTypeSourcePageIndex", results.rawResult, fieldType, source, pageIndex, light])
+graphicFieldImageByType = (results, fieldType, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["graphicFieldImageByType", results.rawResult, fieldType])
+graphicFieldImageByTypeSource = (results, fieldType, source, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["graphicFieldImageByTypeSource", results.rawResult, fieldType, source])
+graphicFieldImageByTypeSourcePageIndex = (results, fieldType, source, pageIndex, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["graphicFieldImageByTypeSourcePageIndex", results.rawResult, fieldType, source, pageIndex])
+graphicFieldImageByTypeSourcePageIndexLight = (results, fieldType, source, pageIndex, light, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["graphicFieldImageByTypeSourcePageIndexLight", results.rawResult, fieldType, source, pageIndex, light])
+containers = (results, resultType, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["containers", results.rawResult, resultType])
+encryptedContainers = (results, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["encryptedContainers", results.rawResult])
+
+const DocumentReader = {
+    getDocumentReaderIsReady,
+    getDocumentReaderStatus,
+    getRfidSessionStatus,
+    setRfidSessionStatus,
+    getTag,
+    setTag,
+    getTenant,
+    setTenant,
+    getEnv,
+    setEnv,
+    getFunctionality,
+    setFunctionality,
+    getProcessParams,
+    setProcessParams,
+    getCustomization,
+    setCustomization,
+    getRfidScenario,
+    setRfidScenario,
+    resetConfiguration,
+    initializeReader,
+    initializeReaderWithBleDeviceConfig,
+    deinitializeReader,
+    prepareDatabase,
+    removeDatabase,
+    runAutoUpdate,
+    cancelDBUpdate,
+    checkDatabaseUpdate,
+    scan,
+    recognize,
+    startNewPage,
+    stopScanner,
+    startRFIDReader,
+    readRFID,
+    stopRFIDReader,
+    providePACertificates,
+    provideTACertificates,
+    provideTASignature,
+    setTCCParams,
+    addPKDCertificates,
+    clearPKDCertificates,
+    startNewSession,
+    connectBluetoothDevice,
+    setLocalizationDictionary,
+    getLicense,
+    getAvailableScenarios,
+    getIsRFIDAvailableForUse,
+    isAuthenticatorRFIDAvailableForUse,
+    isAuthenticatorAvailableForUse, 
+    getDocReaderVersion, 
+    getDocReaderDocumentsDatabase,
+    finalizePackage,
+    endBackendTransaction,
+    getTranslation,
+    textFieldValueByType,
+    textFieldValueByTypeLcid,
+    textFieldValueByTypeSource,
+    textFieldValueByTypeLcidSource,
+    textFieldValueByTypeSourceOriginal,
+    textFieldValueByTypeLcidSourceOriginal,
+    textFieldByType,
+    textFieldByTypeLcid,
+    graphicFieldByTypeSource,
+    graphicFieldByTypeSourcePageIndex,
+    graphicFieldByTypeSourcePageIndexLight,
+    graphicFieldImageByType,
+    graphicFieldImageByTypeSource,
+    graphicFieldImageByTypeSourcePageIndex,
+    graphicFieldImageByTypeSourcePageIndexLight,
+    containers,
+    encryptedContainers
+}
 
 DocumentReaderPlugin = {}
 

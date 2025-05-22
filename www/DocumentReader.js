@@ -4313,6 +4313,8 @@ const Enum = {
    eMrzDetectionModes,
 }
 
+const DocumentReader = {}
+
 DocumentReader.getDocumentReaderIsReady = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getDocumentReaderIsReady"])
 DocumentReader.getDocumentReaderStatus = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getDocumentReaderStatus"])
 DocumentReader.getRfidSessionStatus = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getRfidSessionStatus"])
@@ -4366,6 +4368,7 @@ DocumentReader.getDocReaderDocumentsDatabase = (successCallback, errorCallback) 
 DocumentReader.finalizePackage = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["finalizePackage"])
 DocumentReader.endBackendTransaction = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["endBackendTransaction"])
 DocumentReader.getTranslation = (className, value, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getTranslation", className, value])
+
 DocumentReader.textFieldValueByType = (results, fieldType, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["textFieldValueByType", results.rawResult, fieldType])
 DocumentReader.textFieldValueByTypeLcid = (results, fieldType, lcid, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["textFieldValueByTypeLcid", results.rawResult, fieldType, lcid])
 DocumentReader.textFieldValueByTypeSource = (results, fieldType, source, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["textFieldValueByTypeSource", results.rawResult, fieldType, source])
@@ -4384,10 +4387,7 @@ DocumentReader.graphicFieldImageByTypeSourcePageIndexLight = (results, fieldType
 DocumentReader.containers = (results, resultType, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["containers", results.rawResult, resultType])
 DocumentReader.encryptedContainers = (results, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["encryptedContainers", results.rawResult])
 
-const DocumentReader = {
-    getDocumentReaderIsReady,
-    getDocReaderVersion
-}
+DocumentReaderPlugin = {}
 
 DocumentReaderPlugin.DocumentReader = DocumentReader
 DocumentReaderPlugin.Enum = Enum
@@ -4479,10 +4479,5 @@ DocumentReaderPlugin.EIDDataGroups = EIDDataGroups
 DocumentReaderPlugin.DTCDataGroup = DTCDataGroup
 DocumentReaderPlugin.RFIDScenario = RFIDScenario
 DocumentReaderPlugin.PrepareProgress = PrepareProgress
-
-DocumentReaderPlugin = {
-    DocumentReader,
-    Enum
-}
 
 module.exports = DocumentReaderPlugin

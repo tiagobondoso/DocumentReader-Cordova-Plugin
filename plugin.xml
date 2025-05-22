@@ -6,7 +6,7 @@
   <keywords>cordova,document,reader,docreader,regula,scanner,mrz</keywords>
 
   <js-module name="DocumentReader" src="www/DocumentReader.js">
-    <clobbers target="DocumentReader" />
+    <clobbers target="cordova.plugins.DocumentReader" />
   </js-module>
 
   <platform name="ios">

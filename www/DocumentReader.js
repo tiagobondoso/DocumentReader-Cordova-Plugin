@@ -4553,4 +4553,6 @@ DocumentReaderPlugin.DTCDataGroup = DTCDataGroup
 DocumentReaderPlugin.RFIDScenario = RFIDScenario
 DocumentReaderPlugin.PrepareProgress = PrepareProgress
 
-module.exports = DocumentReaderPlugin
+exports.getDocReaderVersion = function(success, error) {
+    exec(success, error, "RGLWJSONCReader", "exec", ["getDocReaderVersion"])
+}

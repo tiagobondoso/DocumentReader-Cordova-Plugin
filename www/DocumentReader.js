@@ -4362,8 +4362,8 @@ getLicense = (successCallback, errorCallback) => cordova.exec(successCallback, e
 getAvailableScenarios = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getAvailableScenarios"])
 getIsRFIDAvailableForUse = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getIsRFIDAvailableForUse"])
 isAuthenticatorRFIDAvailableForUse = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["isAuthenticatorRFIDAvailableForUse"])
-isAuthenticatorAvailableForUse = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["isAuthenticatorAvailableForUse"])
-getDocReaderVersion = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getDocReaderVersion"])
+isAuthenticatorAvailableForUse = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["isAuthenticatorAvailableForUse"]);
+getDocReaderVersion = function (successCallback, errorCallback) { cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getDocReaderVersion"]) };
 getDocReaderDocumentsDatabase = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getDocReaderDocumentsDatabase"])
 finalizePackage = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["finalizePackage"])
 endBackendTransaction = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["endBackendTransaction"])
@@ -4464,6 +4464,7 @@ DocumentReaderPlugin = {}
 
 DocumentReaderPlugin.DocumentReader = DocumentReader
 DocumentReaderPlugin.Enum = Enum
+DocumentReaderPlugin.getDocReaderVersion = getDocReaderVersion
 
 DocumentReaderPlugin.DocumentReaderScenario = DocumentReaderScenario
 DocumentReaderPlugin.Rect = Rect
@@ -4553,6 +4554,4 @@ DocumentReaderPlugin.DTCDataGroup = DTCDataGroup
 DocumentReaderPlugin.RFIDScenario = RFIDScenario
 DocumentReaderPlugin.PrepareProgress = PrepareProgress
 
-exports.getDocReaderVersion = function(success, error) {
-    exec(success, error, "RGLWJSONCReader", "exec", ["getDocReaderVersion"])
-}
+module.exports = DocumentReaderPlugin

@@ -4315,7 +4315,7 @@ const Enum = {
 
 
 
-getDocumentReaderIsReady = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getDocumentReaderIsReady"])
+getDocumentReaderIsReady = function (successCallback, errorCallback) { cordova.exec(successCallback, errorCallback, "RGLWDocumentReader", "exec", ["getDocumentReaderIsReady"])};
 getDocumentReaderStatus = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getDocumentReaderStatus"])
 getRfidSessionStatus = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getRfidSessionStatus"])
 setRfidSessionStatus = (status, successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["setRfidSessionStatus", status])
@@ -4363,7 +4363,7 @@ getAvailableScenarios = (successCallback, errorCallback) => cordova.exec(success
 getIsRFIDAvailableForUse = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getIsRFIDAvailableForUse"])
 isAuthenticatorRFIDAvailableForUse = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["isAuthenticatorRFIDAvailableForUse"])
 isAuthenticatorAvailableForUse = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["isAuthenticatorAvailableForUse"]);
-getDocReaderVersion = function (successCallback, errorCallback) { cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getDocReaderVersion"]) };
+getDocReaderVersion = function (successCallback, errorCallback) { cordova.exec(successCallback, errorCallback, "RGLWDocumentReader", "exec", ["getDocReaderVersion"]) };
 getDocReaderDocumentsDatabase = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["getDocReaderDocumentsDatabase"])
 finalizePackage = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["finalizePackage"])
 endBackendTransaction = (successCallback, errorCallback) => cordova.exec(successCallback, errorCallback, "DocumentReader", "exec", ["endBackendTransaction"])
@@ -4465,6 +4465,7 @@ DocumentReaderPlugin = {}
 DocumentReaderPlugin.DocumentReader = DocumentReader
 DocumentReaderPlugin.Enum = Enum
 DocumentReaderPlugin.getDocReaderVersion = getDocReaderVersion
+DocumentReaderPlugin.getDocumentReaderIsReady = getDocumentReaderIsReady
 
 DocumentReaderPlugin.DocumentReaderScenario = DocumentReaderScenario
 DocumentReaderPlugin.Rect = Rect

@@ -4555,6 +4555,6 @@ DocumentReaderPlugin.DTCDataGroup = DTCDataGroup
 DocumentReaderPlugin.RFIDScenario = RFIDScenario
 DocumentReaderPlugin.PrepareProgress = PrepareProgress
 
-exports.getDocumentReaderIsReady = function (success, error) {
+module.exports = getDocumentReaderIsReady = function (success, error) {
     cordova.exec(success, error, "RGLWDocumentReader", "exec", ["getDocumentReaderIsReady"]);
 };
